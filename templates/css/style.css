@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "CyberPunk";
+    src: url('../font/Cyberpunk.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "CyberPunk";
+    background: url('background.jpg') no-repeat center/cover;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    z-index: -1;
+    filter: blur(5px); 
+}
+
+button {
+    font-family: "CyberPunk";
+    background: none;
+}
+
+.heading{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    width: 85%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__title{
+    color: #eae8e8;
+    text-shadow:
+    0 0 5px #eae8e8,
+    0 0 7px #9c3fde,
+    0 0 10px #9c3fde,
+    0 0 13px #9c3fde,
+    0 0 15px #9c3fde,
+    0 0 18px #9c3fde,
+    0 0 25px #9c3fde,
+    0 0 29px #9c3fde;
+}
+
+.nav__btn {
+    margin-right: 25em;
+    padding: 5px 0;
+
+    width: 150px;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    border: 1px solid #9c3fde;
+    transition: .5s ease-in-out;
+
+    color: #eae8e8;
+    text-shadow:
+    0 0 5px #eae8e8,
+    0 0 7px #9c3fde,
+    0 0 10px #9c3fde,
+    0 0 13px #9c3fde,
+    0 0 15px #9c3fde,
+    0 0 18px #9c3fde,
+    0 0 25px #9c3fde,
+    0 0 29px #9c3fde;
+}
+.nav__btn:hover {
+    background-color: #9c3fde3f;
+}
+
+.block-end {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #eae8e8;
+    font-size: 28px;
+
+    background-color: #252525a0;
+
+    z-index: 3;
+
+    transform: scale(0);
+    transition: .5s ease-in-out;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 5px;
+
+    color: #eae8e8;
+    font-size: 20px;
+
+    border: 1px solid #252525a0;
+
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid #eae8e8;
+}
+
+
+.hr-container {
+    width: 80%; 
+    margin: 0 auto;
+}
+
+.hr {
+    border: none;
+    box-shadow: 0 0 10px 6px rgba(156, 63, 222, 0.564);
+}
+
+.content{
+    height: 70vh;
+    display: flex;
+}
+
+.content-game {
+    width: 640px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-card {
+    width: 145px;
+    height: 200px;
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.content-card.rotate {
+    transform: rotateY(180deg);
+}
+
+.content-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.content-card.opacityCheck .front-card {
+    opacity: 0.5;
+  }
+  
+.front-card,
+.back-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    transform: rotateY(180deg);
+}
+
+
